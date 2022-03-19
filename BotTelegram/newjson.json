@@ -1,0 +1,81 @@
+{
+    "ok": true,
+    "result": [{
+            "update_id": 100978619,
+            "message": {
+                "message_id": 12,
+                "from": {
+                    "id": 467217090,
+                    "is_bot": false,
+                    "first_name": "Cristian",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 467217090,
+                    "first_name": "Cristian",
+                    "type": "private"
+                },
+                "date": 1646734972,
+                "text": "ss"
+            }
+        }, {
+            "update_id": 100978620,
+            "message": {
+                "message_id": 13,
+                "from": {
+                    "id": 467217090,
+                    "is_bot": false,
+                    "first_name": "Cristian",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 467217090,
+                    "first_name": "Cristian",
+                    "type": "private"
+                },
+                "date": 1646735447,
+                "text": "asdfsa"
+            }
+        }, {
+            "update_id": 100978621,
+            "message": {
+                "message_id": 14,
+                "from": {
+                    "id": 467217090,
+                    "is_bot": false,
+                    "first_name": "Cristian",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 467217090,
+                    "first_name": "Cristian",
+                    "type": "private"
+                },
+                "date": 1646736600,
+                "text": "/citt<"
+            }
+        }, {
+            "update_id": 100978622,
+            "message": {
+                "message_id": 15,
+                "from": {
+                    "id": 467217090,
+                    "is_bot": false,
+                    "first_name": "Cristian",
+                    "language_code": "en"
+                },
+                "chat": {
+                    "id": 467217090,
+                    "first_name": "Cristian",
+                    "type": "private"
+                },
+                "date": 1646736603,
+                "text": "/citta",
+                "entities": [{
+                        "offset": 0,
+                        "length": 6,
+                        "type": "bot_command"
+                    }]
+            }
+        }]
+}
