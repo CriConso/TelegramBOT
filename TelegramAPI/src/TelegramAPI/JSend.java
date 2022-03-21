@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bottelegram;
+package TelegramAPI;
 
 import TelegramAPI.JsonReader;
 import java.io.IOException;
@@ -26,3 +26,4 @@ public class JSend {
         JSONObject send = JsonReader.readJsonFromUrl("https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + chatID + "&text=" + text);
     }
 }
+

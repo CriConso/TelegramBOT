@@ -5,7 +5,10 @@
  */
 package bottelegram;
 
+import TelegramAPI.JParser;
+import TelegramAPI.JSend;
 import TelegramAPI.JsonReader;
+import TelegramAPI.Osm;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,20 +39,23 @@ public class Threadupdates extends Thread {
         List idMessaggi = new ArrayList();
         Osm gestore = new Osm();
 
-        while (true) {
+        
+        while (true) {   
             try {
                 JSONObject update = JsonReader.readJsonFromUrl("https://api.telegram.org/bot" + token + "/getUpdates");
-                parser.parse(update);
+                parser.parse(update,token);
 
-                int chatID = Integer.valueOf(parser.getIdChat());
-                int idMessaggio = Integer.valueOf(parser.getIdMessaggio());
+                int chatID = parser.getIdChat();
+                int idMessaggio = parser.getIdMessaggio();
                 String nome = parser.getNome();
                 String text = parser.getText();
 
-                if (text.startsWith("/citta") && !idMessaggi.contains(idMessaggio)) {
+                if (text != null) {
+                    if (text.startsWith("/citta") && !idMessaggi.contains(String.valueOf(idMessaggio))) {
 
                     String nomeCitta = text.substring(6);
                     System.out.println(nomeCitta);
+                    
                     if (!nomeCitta.equals("")) {
                         gestore.getXml(nomeCitta);
                         gestore.getCoordinate();
@@ -62,6 +68,8 @@ public class Threadupdates extends Thread {
                     invia.sendMessage("Messaggio non valido",chatID);
                     idMessaggi.add(idMessaggio);
                 }
+                }
+                
 
                 Thread.sleep(5000);
 
